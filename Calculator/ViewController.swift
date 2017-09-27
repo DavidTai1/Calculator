@@ -13,14 +13,20 @@ class ViewController: UIViewController {
     // display
     @IBOutlet weak var display: UILabel!
     
+    // UserTyping
+    private var UserTyping = false
+    
     // CalModel
     private var calmodel = CalModel()
     
     // 0-9, 10 buttons
     @IBAction func numbers(_ sender: UIButton) {
         if let touched = sender.currentTitle{
-            if !(Int(displayvalue) == 0 && Int(touched) == 0){
-                display!.text = String(displayvalue) + touched
+            if UserTyping{
+                display!.text = display.text! + touched
+            }else{
+                display.text = touched
+                UserTyping = true
             }
         }
         else{
@@ -38,7 +44,21 @@ class ViewController: UIViewController {
     }
     // operations
     @IBAction func Operations(_ sender: UIButton) {
-        calmodel.setOperand(displayvalue)
+        if let op = sender.currentTitle {
+            if op == "c"{
+                if displayvalue == 0{
+                    calmodel.Operations("c_all")
+                }else{
+                    calmodel.Operations(op)
+                }
+                displayvalue = 0
+                UserTyping = false
+            }
+        }
+        if UserTyping{
+            calmodel.setOperand(displayvalue)
+            UserTyping = false
+        }
         if let op = sender.currentTitle{
             calmodel.Operations(op)
         }

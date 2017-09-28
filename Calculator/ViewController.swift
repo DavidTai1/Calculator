@@ -43,6 +43,8 @@ class ViewController: UIViewController {
             display.text = String(newValue)
         }
     }
+    // operations button
+    
     
     @IBAction func Operations(_ sender: UIButton) {
         if let op = sender.currentTitle {

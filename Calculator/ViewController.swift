@@ -33,6 +33,7 @@ class ViewController: UIViewController {
             print("ERROR: numbers title not set")
         }
     }
+    
     // get/set display
     var displayvalue: Double{
         get{
@@ -42,7 +43,7 @@ class ViewController: UIViewController {
             display.text = String(newValue)
         }
     }
-    // operations
+    
     @IBAction func Operations(_ sender: UIButton) {
         if let op = sender.currentTitle {
             if op == "c"{

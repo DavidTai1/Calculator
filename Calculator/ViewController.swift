@@ -9,7 +9,10 @@
 import UIKit
 
 
+var currentpass = "7.22"
+
 class ViewController: UIViewController {
+    // nevagate to secondView
     // white status bar
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -44,10 +47,31 @@ class ViewController: UIViewController {
             return Double(display.text!)!
         }
         set{
-            display.text = String(newValue)
+            let ints = Int(newValue)
+            let doubles = Double(newValue)
+            if Double(ints) == doubles{
+                display.text = String(ints)
+            }else{
+                display.text = String(newValue)
+            }
         }
     }
     // operations
+    
+    @IBOutlet weak var HButton: UIButton!
+    
+    @IBAction func ShowButton(_ sender: UIButton) {
+        if let passcode = self.display.text{
+            if passcode == currentpass{
+                HButton.isHidden = false
+            }
+        }
+        else{
+            HButton.isHidden = true
+        }
+        
+    }
+    
     @IBAction func Operations(_ sender: UIButton) {
         if let op = sender.currentTitle {
             if op == "c"{

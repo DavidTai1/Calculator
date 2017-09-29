@@ -32,7 +32,7 @@
                                             <view tag="10" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1O-y0-Y9e">
                                                 <rect key="frame" x="0.0" y="0.0" width="412" height="237.33333333333331"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pH-kN-rOg">
+                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pH-kN-rOg">
                                                         <rect key="frame" x="0.0" y="0.0" width="402" height="237.33333333333331"/>
                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="33"/>
@@ -286,6 +286,7 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="Operations:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iM4-dS-zMa"/>
+                                                            <action selector="ShowButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FYB-W5-yYi"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -297,23 +298,85 @@
                                     <constraint firstItem="OgV-kW-M9p" firstAttribute="height" secondItem="DP9-Kn-w9F" secondAttribute="height" multiplier="2:1" id="LJd-Km-x2l"/>
                                 </constraints>
                             </stackView>
+                            <button hidden="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBa-f8-TK2">
+                                <rect key="frame" x="394" y="0.0" width="10" height="10"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="SecondView:" destination="BYZ-38-t0r" eventType="touchDownRepeat" id="B6l-F2-hQR"/>
+                                    <segue destination="haX-E1-Q5Y" kind="show" id="HID-YY-I5M"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ho8-fc-w7f" secondAttribute="trailingMargin" constant="-19" id="8qQ-ee-suq"/>
-                            <constraint firstItem="Ho8-fc-w7f" firstAttribute="leadingMargin" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-19" id="LGD-GH-WZL"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ho8-fc-w7f" secondAttribute="bottom" constant="1" id="Moh-a9-g0P"/>
+                            <constraint firstAttribute="trailing" secondItem="HBa-f8-TK2" secondAttribute="trailing" id="6yy-SH-NC9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ho8-fc-w7f" secondAttribute="trailingMargin" constant="-19.5" id="8qQ-ee-suq"/>
+                            <constraint firstItem="Ho8-fc-w7f" firstAttribute="leadingMargin" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-19.5" id="LGD-GH-WZL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ho8-fc-w7f" secondAttribute="bottom" constant="0.5" id="Moh-a9-g0P"/>
                             <constraint firstItem="Ho8-fc-w7f" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="RZn-qf-Y3b"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="HButton" destination="HBa-f8-TK2" id="PfZ-Ek-tNC"/>
                         <outlet property="display" destination="8pH-kN-rOg" id="pdy-KJ-jGV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="82.608695652173921" y="36.684782608695656"/>
+            <point key="canvasLocation" x="129" y="-104"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="vLV-zc-kfE">
+            <objects>
+                <viewController id="haX-E1-Q5Y" customClass="SecondViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xcG-GP-yqS"/>
+                        <viewControllerLayoutGuide type="bottom" id="CIl-KX-DQt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NtB-q4-V1l">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44s-uF-BCM">
+                                <rect key="frame" x="182" y="181" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="EjR-3X-C7y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Cq-VT-1r5">
+                                <rect key="frame" x="236" y="257" width="49" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="Submit:" destination="haX-E1-Q5Y" eventType="touchUpInside" id="y40-2o-6BV"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Choose your new pass" borderStyle="roundedRect" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wxN-XY-w3j">
+                                <rect key="frame" x="118" y="219" width="167" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="Passboard:" destination="haX-E1-Q5Y" eventType="editingDidEnd" id="y3D-SD-jmh"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wxN-XY-w3j" firstAttribute="top" secondItem="44s-uF-BCM" secondAttribute="bottom" constant="8" id="0iH-q1-bXZ"/>
+                            <constraint firstItem="4Cq-VT-1r5" firstAttribute="top" secondItem="wxN-XY-w3j" secondAttribute="bottom" constant="8" id="C0O-oB-nzN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4Cq-VT-1r5" secondAttribute="trailing" constant="109" id="FGm-Mu-jxL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wxN-XY-w3j" secondAttribute="trailing" constant="109" id="g3c-Vi-rSR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="PassBoard" destination="wxN-XY-w3j" id="Rvb-Qa-DMq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sxc-Xj-z85" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="889.85507246376824" y="28.532608695652176"/>
         </scene>
     </scenes>
 </document>

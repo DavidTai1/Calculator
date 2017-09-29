@@ -10,6 +10,10 @@ import UIKit
 
 
 class ViewController: UIViewController {
+    // white status bar
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     // display
     @IBOutlet weak var display: UILabel!
     

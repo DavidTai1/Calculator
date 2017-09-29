@@ -10,6 +10,8 @@ import UIKit
 
 class BounceButton: UIButton {
     var color = UIColor.black
+    
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         //
         color = self.backgroundColor!

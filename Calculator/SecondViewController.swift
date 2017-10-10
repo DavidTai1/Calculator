@@ -14,9 +14,15 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var PassBoard: UITextField!
 
     @IBAction func Submit(_ sender: UIButton) {
-        if let new_pass = PassBoard.text{
-            currentpass = new_pass
+        // using guard learned from https://ericcerney.com/swift-guard-statement/
+        // improve functionality & readbility, changes for other statements later
+        guard let new_pass = PassBoard.text else {
+            print("new_pass not set")
+            print("password not changed")
+            return
         }
+        currentpass = new_pass
+        print("password upadted to \(currentpass)")
     }
     override func viewDidLoad() {
         super.viewDidLoad()

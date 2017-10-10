@@ -9,9 +9,20 @@
 import UIKit
 
 
-var currentpass = "7.22"
+
+
+// global password
 
 class ViewController: UIViewController {
+    var currentpass = "not set"
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if (UserDefaults.standard.string(forKey: "PASS") == nil){
+            UserDefaults.standard.set("7.22", forKey: "PASS")
+        }
+        currentpass = UserDefaults.standard.string(forKey: "PASS")!
+    }
+    
     // nevagate to secondView
     // white status bar
     override var preferredStatusBarStyle: UIStatusBarStyle {

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -32,7 +32,7 @@
                                             <view tag="10" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1O-y0-Y9e">
                                                 <rect key="frame" x="0.0" y="0.0" width="412" height="237.33333333333331"/>
                                                 <subviews>
-                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pH-kN-rOg">
+                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pH-kN-rOg">
                                                         <rect key="frame" x="0.0" y="0.0" width="402" height="237.33333333333331"/>
                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="33"/>
@@ -302,7 +302,6 @@
                                 <rect key="frame" x="394" y="0.0" width="10" height="10"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <action selector="SecondView:" destination="BYZ-38-t0r" eventType="touchDownRepeat" id="B6l-F2-hQR"/>
                                     <segue destination="haX-E1-Q5Y" kind="show" id="HID-YY-I5M"/>
                                 </connections>
                             </button>
@@ -338,36 +337,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44s-uF-BCM">
-                                <rect key="frame" x="182" y="181" width="39" height="30"/>
-                                <state key="normal" title="Close"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="EjR-3X-C7y"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Cq-VT-1r5">
-                                <rect key="frame" x="236" y="257" width="49" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Cq-VT-1r5">
+                                <rect key="frame" x="325" y="247" width="49" height="30"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="Submit:" destination="haX-E1-Q5Y" eventType="touchUpInside" id="y40-2o-6BV"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Choose your new pass" borderStyle="roundedRect" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wxN-XY-w3j">
-                                <rect key="frame" x="118" y="219" width="167" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Choose your new pass" borderStyle="roundedRect" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wxN-XY-w3j">
+                                <rect key="frame" x="20" y="219" width="354" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="Passboard:" destination="haX-E1-Q5Y" eventType="editingDidEnd" id="y3D-SD-jmh"/>
-                                </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44s-uF-BCM">
+                                <rect key="frame" x="186" y="167" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="EjR-3X-C7y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wxN-XY-w3j" firstAttribute="top" secondItem="44s-uF-BCM" secondAttribute="bottom" constant="8" id="0iH-q1-bXZ"/>
+                            <constraint firstItem="44s-uF-BCM" firstAttribute="top" secondItem="xcG-GP-yqS" secondAttribute="bottom" constant="147" id="2H0-Tk-sff"/>
+                            <constraint firstItem="wxN-XY-w3j" firstAttribute="leading" secondItem="NtB-q4-V1l" secondAttribute="leading" constant="20" id="3Wt-UX-dit"/>
                             <constraint firstItem="4Cq-VT-1r5" firstAttribute="top" secondItem="wxN-XY-w3j" secondAttribute="bottom" constant="8" id="C0O-oB-nzN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4Cq-VT-1r5" secondAttribute="trailing" constant="109" id="FGm-Mu-jxL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="wxN-XY-w3j" secondAttribute="trailing" constant="109" id="g3c-Vi-rSR"/>
+                            <constraint firstItem="wxN-XY-w3j" firstAttribute="top" secondItem="44s-uF-BCM" secondAttribute="bottom" constant="22" id="GT2-qH-Z7s"/>
+                            <constraint firstItem="44s-uF-BCM" firstAttribute="leading" secondItem="NtB-q4-V1l" secondAttribute="leading" constant="186" id="g0M-Zk-XdQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wxN-XY-w3j" secondAttribute="trailing" constant="20" id="g3c-Vi-rSR"/>
                         </constraints>
                     </view>
                     <connections>
